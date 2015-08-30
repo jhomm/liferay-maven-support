@@ -10,6 +10,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.liferay.maven.plugins</groupId>
 	<artifactId>liferay-maven-plugin</artifactId>
+  <version>6.2.10.11</version>
 	<packaging>maven-plugin</packaging>
 	<name>Liferay Maven 2 Plugin</name>
 	<description>Contains goals to manage Liferay plugins.</description>
@@ -23,13 +24,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<testResources>
-			<testResource>
-				<directory>src/test/resources/projects</directory>
-				<filtering>true</filtering>
-				<targetPath>projects</targetPath>
-			</testResource>
-		</testResources>
 	</build>
 	<dependencies>
 
@@ -42,16 +36,6 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.maven</groupId>
-			<artifactId>maven-compat</artifactId>
-			<version>${maven.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.maven</groupId>
-			<artifactId>maven-core</artifactId>
-			<version>${maven.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.maven</groupId>
 			<artifactId>maven-model</artifactId>
 			<version>${maven.version}</version>
 		</dependency>
@@ -60,13 +44,23 @@
 			<artifactId>maven-plugin-api</artifactId>
 			<version>${maven.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-project</artifactId>
+			<version>${maven.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven.shared</groupId>
+			<artifactId>maven-invoker</artifactId>
+			<version>${maven.version}</version>
+		</dependency>
 
 		<!-- External -->
 
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
-			<version>2.4</version>
+			<version>1.4</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-lang</groupId>
@@ -92,19 +86,6 @@
 			<groupId>org.codehaus.plexus</groupId>
 			<artifactId>plexus-io</artifactId>
 			<version>1.0-alpha-1</version>
-		</dependency>
-
-		<!-- Unit testing -->
-
-		<dependency>
-			<groupId>org.apache.maven.plugin-testing</groupId>
-			<artifactId>maven-plugin-testing-harness</artifactId>
-			<version>3.3.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.maven.shared</groupId>
-			<artifactId>maven-verifier</artifactId>
-			<version>1.5</version>
 		</dependency>
 	</dependencies>
 </project>
